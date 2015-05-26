@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0 auto; padding:0;}
+.local-travel{ background:url(../images/local-travel-playguide.png) 0 0 no-repeat;}
+.container{ width:100%!important}
+.margintop-20{ margin-top:-10px;}
+.margintop10{ margin-top:10px;}
+.margintop20{ margin-top:20px;}
+.myplace{background:#6b757c; margin:5px 0 0px 0;}
+.agechilde{ margin:5px 0;}
+.myplace-btn{ background:#4a8995; color:#fff; text-align:center; display:block; line-height:83px; max-width:180px;}
+.myplace-search{ padding:15px; position:relative;}
+.myplace-search input{ background:#bbc0c4; position:relative; border:0; border-radius:0;}
+.myplace-search input:after{ background:url(../images/search-icon.png) 0 0 no-repeat; position:absolute; right:0; top:3px; height:40px; width:45px; content:'';}
+.near-km{ margin:30px 0 0px 0;}
+.near-km span{margin-top:15px; float:left;line-height:19px; }
+.near-km span .ui-radio{float:left; padding-right:30px; }
+.pad-left0{ padding-left:0!important;}
+.pad-right0{ padding-right:0!important;}
+.Livvi{ padding:10px 0; background:#00aeef; color:#fff;}
+.listcontent{ padding-top:45px;}
+.address h4{ padding:0 10px 0 10px; font-size:17px;}
+.search-list{ clear:both; margin:0; padding:0;}
+.search-list li{ border-top:1px solid #ccc; padding:15px 10px;}
+.search-list li:first-child{ border-top:0;}
+.media-body p{ color:#666666; position:relative; padding-right:30px;}
+.media-body a{ position:absolute; right:0; top:-10px;}
+.arroundme{ float:left;}
+.arroundme img{ float:left; padding-right:5px; margin:-25px 0 0  0;}
+.ayc #price-min-ayc{ display:none;}
+.ayc #price-max-ayc{ display:none;}
+
+.aoc #price-min-aoc{ display:none;}
+.aoc #price-max-aoc{ display:none;}
+
+@media (max-width:767px) {
+.media-body a{ top:40%!important;}
+}
+
+@media (max-width:479px) {
+.page{padding:20px 0 0 0 ;}
+.arroundme img{ height:35px; margin-top:-15px;}
+.myplace-btn{ font-size:13px; line-height:65px;}
+.myplace-search .ui-input-text{ padding:0; margin:0;}
+.near-km span{ line-height:13px; font-size:18px; margin-top:0;}
+.address h4{ font-size:15px;}
+.agechilde h5{ font-size:16px;}
+
+}
+
+@media (max-width:360px) {
+.agechilde h5{ font-size:14px; margin-bottom:0;}
+.near-km span{ font-size:13px; margin-bottom:10px;}
+.efis{ font-size:13px;}
+}
+
+@media (max-width:320px) {
+.ui-slider-track .ui-btn.ui-slider-handle{ margin-top:-14px!important;}
+}
+
+@media screen 
+  and (min-device-width: 321px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+ .page{ margin:30px 0;}
+}
+
