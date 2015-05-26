@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 public class EventAdapter extends BaseAdapter{
 
+	//// ishannnnnnnnnnnnnnnnnn
 	Context context;
 	ArrayList<Events> arrayList;
 	
