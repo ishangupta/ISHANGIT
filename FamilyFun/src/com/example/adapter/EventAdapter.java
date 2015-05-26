@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class EventAdapter extends BaseAdapter{
 
-	//// ishannnnnnnnnnnnnnnnnn
+	//// ishannnnnnnnnnnnnnnnn ,mkkjkjkkn
 	Context context;
 	ArrayList<Events> arrayList;
 	
