@@ -2,8 +2,6 @@ $(document).ready(function(){
 	
 });
 var door="indoor";
-var youngAge="0";
-var oldAge="0";
 var funType="play";
 var distance="";
 var postcode="";
@@ -44,17 +42,33 @@ function eatClick()
 function clearRadioButton()
 {
 $('input:radio[name=vale]').each(function () { $(this).prop('checked', false); });
+distance="";
 }
 function clearPostCode()
 {
 	document.getElementById("postcode").value="";
+	distance=$("input[name='vale']:checked").val();
+	postcode="";
 }
 
 function gotoResultPage()
 {
-	window.location="eat.html";
+	//window.location="eat.html";
 	//alert("1");
-	var val=document.getElementById("price-max-aoc").value;
+	//var val=document.getElementById("price-max-aoc").value;
 	//alert(val);
+	
+	var youngAge=document.getElementById("price-max-ayc").value;
+    var oldAge=document.getElementById("price-max-aoc").value;
+	postcode=document.getElementById("postcode").value;
+	
+	alert(youngAge+"-"+oldAge+"-"+distance+"-"+postcode+"-"+funType+"-"+door);
+	if(distance=="" && postcode=="")
+	{
+		alert("Please select the distance or postcode");
+		return;
+	}else{
+		alert("all ok");
+	}
 }
       

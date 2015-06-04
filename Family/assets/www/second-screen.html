@@ -19,8 +19,8 @@
   <div class="row clearfix"><img src="images/findyourfamilyfun.jpg" class="img-responsive" alt="findyourfamilyfun"></div>
   <p class="text-center bold margintop10 efis">Enter Features and information to search... Where to go with kids...What to do with kids?</p>
   <div class="clearfix margintop10">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><img src="images/indoor-selected.jpg" class="img-responsive" alt="indoor"></div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><img src="images/outdoor.jpg" class="img-responsive" alt="outdoor"></div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" onclick="indoorClick();"><img src="images/indoor-selected.jpg" id="img_indoor" class="img-responsive" alt="indoor"></div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" onclick="outdoorClick();"><img src="images/outdoor.jpg" id="img_outdoor" class="img-responsive" alt="outdoor"></div>
   </div>
   <div class="row agechilde">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -28,7 +28,7 @@
       <div data-role="main" class="ui-content ayc">
     <form method="post" action="demoform.asp">
       <div data-role="rangeslider">
-        <input type="range" name="price-max-ayc" id="price-max-ayc" value="2" min="0" max="10">
+        <input type="range" name="price-max-ayc" id="price-max-ayc" value="2" min="0" max="5">
       </div>
         
       </form>
@@ -39,7 +39,7 @@
       <div data-role="main" class="ui-content aoc">
     <form method="post" action="demoform.asp">
       <div data-role="rangeslider">
-	    <input type="range" name="price-max-aoc" id="price-max-aoc" value="0" min="0" max="10">
+	    <input type="range" name="price-max-aoc" id="price-max-aoc" value="0" min="5" max="10">
       </div>
        
       </form>
@@ -47,19 +47,19 @@
     </div>
   </div>
   <div class=" clearfix margintop10">
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0"><img src="images/eat-btn.jpg" class="img-responsive" alt="Eat"></div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0"><img src="images/play-btn-selected.jpg" class="img-responsive" alt="play-btn-selected"></div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0"><img src="images/stay-btn.jpg" class="img-responsive" alt="stay-btn"></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0" onclick="eatClick();"><img src="images/eat-btn.jpg" class="img-responsive" alt="Eat" id="img_eat"></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0" onclick="playClick();"><img src="images/play-btn-selected.jpg" class="img-responsive" alt="play-btn-selected" id="img_play"></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pad-left0" onclick="stayClick();"><img src="images/stay-btn.jpg" class="img-responsive" alt="stay-btn" id="img_stay"></div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 near-km"> <span class="arroundme" ><img src="images/map.png" class="img-responsive" alt="map">Around Me</span> <span>
-      <input type="radio" name="vale">
+      <input type="radio" name="vale" onclick="clearPostCode();" value="2">
       2km </span> <span>
-      <input type="radio" name="vale">
+      <input type="radio" name="vale" onclick="clearPostCode();" value="5">
       5km </span> <span>
-      <input type="radio" name="vale">
+      <input type="radio" name="vale" onclick="clearPostCode();" value="10">
       10km </span> <span>
-      <input type="radio" name="vale">
+      <input type="radio" name="vale" onclick="clearPostCode();" value="20">
       20km </span> </div>
   </div>
   <div class="row">
@@ -68,7 +68,7 @@
   <div class="row myplace">
     <div class="col-xs-4 col-sm-4 col-md-7 col-lg-4"><span class="myplace-btn">MY PLACE</span></div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 myplace-search">
-      <input type="text" placeholder="enter suburb or postcode..." class="form-control">
+      <input type="text" placeholder="enter suburb or postcode..." class="form-control" onfocus="clearRadioButton();" id="postcode">
     </div>
   </div>
   <div class="row margintop20">
