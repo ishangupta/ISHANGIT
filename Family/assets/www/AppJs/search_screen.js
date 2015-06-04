@@ -1,10 +1,10 @@
-$(document).ready(function(){
-	
-});
+
+
 var door="indoor";
 var funType="play";
 var distance="";
 var postcode="";
+var url;
 
 function indoorClick()
 {
@@ -68,7 +68,40 @@ function gotoResultPage()
 		alert("Please select the distance or postcode");
 		return;
 	}else{
-		alert("all ok");
+		if(distance!="")
+			url="http://www.familyfunplanner.com.au/demofamily/iphone/family_fun_search.php?requestSendFrom=iPhone&searchType="+funType+"&ageYounger="+youngAge+"&ageOlder="+oldAge+"&distance="+distance+"&myLatitude=-33.7646874&myLongitude=150.9901097&locationType="+door;
+		else
+			url="";
+		
+		$.ajax({
+		url : url,
+		data : {
+		},
+		type : 'post',
+		async : 'true',
+		dataType : 'json',
+		beforeSend : function() {
+			toaster.showDialog(); 
+		},
+		complete : function() {
+			toaster.dismissDialog(); 
+		},
+		success : function(result) {
+			alert(JSON.stringify(result));
+			if(result.status.noOfRecords==0)
+			alert("No record found");
+		    else
+			{
+				localStorage.setItem("search_result",JSON.stringify(result));
+				window.location=funType+".html";
+			}
+			
+		},
+		error : function(request, error) {
+			alert("Some error occured");
+			// This callback function will trigger on unsuccessful action
+		}
+	});
 	}
 }
       
