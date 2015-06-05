@@ -53,16 +53,9 @@ function clearPostCode()
 
 function gotoResultPage()
 {
-	//window.location="eat.html";
-	//alert("1");
-	//var val=document.getElementById("price-max-aoc").value;
-	//alert(val);
-	
 	var youngAge=document.getElementById("price-max-ayc").value;
     var oldAge=document.getElementById("price-max-aoc").value;
 	postcode=document.getElementById("postcode").value;
-	
-	alert(youngAge+"-"+oldAge+"-"+distance+"-"+postcode+"-"+funType+"-"+door);
 	if(distance=="" && postcode=="")
 	{
 		alert("Please select the distance or postcode");
@@ -87,7 +80,6 @@ function gotoResultPage()
 			toaster.dismissDialog(); 
 		},
 		success : function(result) {
-			alert(JSON.stringify(result));
 			if(result.status.noOfRecords==0)
 			alert("No record found");
 		    else

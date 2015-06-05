@@ -9,6 +9,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="AppJs/search_screen.js"></script>
+<script type="text/javascript" charset="utf-8" src="AppJs/detail.js"></script>
 </head>
 
 <body>
@@ -26,9 +27,9 @@
       
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active"> <img src="images/slider1.jpg" alt="slider"> </div>
-        <div class="item"> <img src="images/slider2.jpg" alt="slider"> </div>
-        <div class="item"> <img src="images/slider3.jpg" alt="slider"> </div>
+        <div class="item active"> <img src="" alt="slider" id="image1"> </div>
+        <div class="item"> <img src="" alt="slider" id="image2"> </div>
+        <div class="item"> <img src="" alt="slider" id="image3"> </div>
       </div>
       
       <!-- Controls --> 
@@ -36,22 +37,18 @@
   </div>
   <div class="row">
     <div class="col-lg-12 Livvi">
-      <h4 class="pull-left"> Livvi’s Place - Timbrell Park</h4>
+      <h4 class="pull-left" id="name""></h4>
       <img src="images/heart.png" class="heart" alt="heart"></div>
   </div>
   <div class="row margintop20">
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 pad-right0">Livvi's Place Timbrell Park has everything you need for a great day out. Fantastic play equipment for various ages and abilities, bbq, toilets, bubbler, bike path and soccer fields next door. Highly recommend.<br>
-      This playground is fenced, has toilets, is suitable for toddlers, 
-      has sun shade, is suitable for all abilities, has seats, has tables, 
-      has a BBQ, has car parking, is near a bikepath.</div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 pad-right0" id="description"></div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><img src="images/ages2.5-logo.png" class="text-right img-responsive" alt="ages2.5-logo"><br>
       <img src="images/ages59-logo.png" class="text-right img-responsive" alt="ages59-logo"><br>
       <img src="images/ages9-logo.png" class="text-right img-responsive" alt="ages9-logo"></div>
   </div>
   <div class="row margintop20">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 address"><img src="images/map.png" class="pull-left" alt="heart">
-      <h4 class="pull-left">Address: 19 Henley Marine Drive,<br>
-        Five Dock NSW 2046, Australia</h4>
+      <h4 class="pull-left" id="address"></h4>
       <img src="images/call.png" class="pull-left" alt="call"> <img src="images/mouse.png" class="pull-left" alt="mouse"> </div>
   </div>
   <div class="row margintop20">
