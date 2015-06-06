@@ -9,6 +9,8 @@ function startCode() {
 	var jsonArray=data.response;
 	for(i=0;i<jsonArray.length;i++)
 	{
+		var image=jsonArray[i].thumbImageOfList;
+		image=image.replace("demo", "demofamily");
 			output+= '<li id="'+jsonArray[i].idOfList+'" onclick=gotoDetailPage(this.id)>'+
              '<div class="media">'+
              '<div class="media-left"> <a href="#"> <img alt="64x64" src="'+jsonArray[i].thumbImageOfList+'" class="media-object" style="width: 64px; height: 64px;"> </a> </div>'+
