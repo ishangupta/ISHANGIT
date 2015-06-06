@@ -13,7 +13,7 @@ function startCode() {
 		image=image.replace("demo", "demofamily");
 			output+= '<li id="'+jsonArray[i].idOfList+'" onclick=gotoDetailPage(this.id)>'+
              '<div class="media">'+
-             '<div class="media-left"> <a href="#"> <img alt="64x64" src="'+jsonArray[i].thumbImageOfList+'" class="media-object" style="width: 64px; height: 64px;"> </a> </div>'+
+             '<div class="media-left"> <a href="#"> <img alt="64x64" src="'+image+'" class="media-object" style="width: 64px; height: 64px;"> </a> </div>'+
              '<div class="media-body">'+
              '<h4 class="media-heading" id="media-heading">'+jsonArray[i].nameOfList+'<a href="#media-heading" class="anchorjs-link"></a></h4>'+
              '<p>'+jsonArray[i].descOfList+'<a href="#">'+
@@ -59,4 +59,9 @@ function gotoDetailPage(id)
 	});
 	
 	//window.location="result-info.html";
+}
+
+function gotoSearchScreen()
+{
+	window.location="second-screen.html";
 }

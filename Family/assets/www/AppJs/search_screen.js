@@ -64,7 +64,7 @@ function gotoResultPage()
 		if(distance!="")
 			url="http://www.familyfunplanner.com.au/demofamily/iphone/family_fun_search.php?requestSendFrom=iPhone&searchType="+funType+"&ageYounger="+youngAge+"&ageOlder="+oldAge+"&distance="+distance+"&myLatitude=-33.7646874&myLongitude=150.9901097&locationType="+door;
 		else
-			url="";
+			url="http://www.familyfunplanner.com.au/demofamily/iphone/family_fun_search.php?requestSendFrom=iPhone&searchType="+funType+"&ageYounger="+youngAge+"&ageOlder="+oldAge+"&myPlace="+postcode+"&locationType="+door;
 		
 		$.ajax({
 		url : url,
