@@ -21,4 +21,10 @@ function startCode() {
 	document.getElementById("description").innerHTML=""+jsonArray[0].descOfList;
 	document.getElementById("address").innerHTML="Address: "+jsonArray[0].addressOfList+","+jsonArray[0].cityOfList+","+jsonArray[0].stateOfList+"-"+jsonArray[0].postcodeOfList;
 	
+	
+}
+
+function gotoSearchScreen()
+{
+	window.location="second-screen.html";
 }
